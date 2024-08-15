@@ -5,7 +5,7 @@
 
 3. sudo a2dissite 000-default.conf
 
-4. sudo nano /etc/apache2/sites-available/visadoor.com.conf
+4. sudo nano /etc/apache2/sites-available/sachin.com.conf
 
 5. sudo a2ensite sachin.com.conf
 
