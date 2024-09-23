@@ -1,0 +1,17 @@
+service: api-to-s3-service
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-south-1
+  environment:
+    API_URL: https://v2.jokeapi.dev/joke/Any
+    S3_BUCKET_NAME: workharu-serverless-deployment-ap-south-1
+
+  fetchAndStoreData:
+    handler: handler.fetchDataAndUploadToS3
+    events:
+      - schedule: rate(6 hours)
+
+plugins:
+  - serverless-offline
