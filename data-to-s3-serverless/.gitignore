@@ -1,7 +1,7 @@
-data-to-s3
-
 node_modules/
 
-yarn*
+.env
 
+*.lock
 
+*.log
