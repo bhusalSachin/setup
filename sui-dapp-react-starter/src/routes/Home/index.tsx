@@ -1,7 +1,7 @@
 import React from "react";
 import { ConnectButton } from "@mysten/dapp-kit";
 
-function App() {
+function Home() {
   return (
     <div>
       <ConnectButton />
@@ -9,4 +9,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

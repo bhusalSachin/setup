@@ -1,14 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import { Theme } from "@radix-ui/themes";
+import { RouterProvider } from "react-router-dom";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
+import router from "./routes";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <Theme appearance="light">
+      <RouterProvider router={router} />
+    </Theme>
   </React.StrictMode>
 );
-
