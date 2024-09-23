@@ -30,13 +30,13 @@ async function fetchDataAndUploadToS3() {
     };
 
     // Upload data to S3
-    // s3.upload(params, (err, result) => {
-    //   if (err) {
-    //     console.error("Error uploading to S3:", err);
-    //   } else {
-    //     console.log("File successfully uploaded to S3 at:", result.Location);
-    //   }
-    // });
+    s3.upload(params, (err, result) => {
+      if (err) {
+        console.error("Error uploading to S3:", err);
+      } else {
+        console.log("File successfully uploaded to S3 at:", result.Location);
+      }
+    });
   } catch (error) {
     console.error("Error fetching data from API:", error);
   }
